@@ -1,0 +1,89 @@
+/*
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Roboto', 'Verdana', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	background-color: #f9f9fb;
+	color: #333;
+	height: 100%;
+}
+
+html .btn,
+body .btn {
+  outline: none !important;
+}
+html .btn:active,
+body .btn:active,
+html .btn:hover,
+body .btn:hover {
+  outline: none !important;
+}*/
+html .btn.disabled,
+body .btn.disabled {
+  pointer-events: none;
+}
+
+.btn {
+  font-size: 14px;
+}
+
+/*
+.control-label {
+    color: #34495E;
+    font-size: 11px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .3px;
+}
+
+
+.alert {
+    border-radius: 0;
+    border-width: 0 0 0 3px;
+}
+
+[class*=hint--]:after {
+	border-radius: 2px;
+	font-size: 11px;
+    font-weight: 600;
+    line-height: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+	box-shadow: none;
+	color: #f9f9fb;
+	padding: 6px 10px;
+	text-shadow: none;
+}
+*/
+.input-group-list .btn-clone {
+  display: none;
+}
+.input-group-list .input-group:first-child .btn-clone {
+  display: block;
+}
+.input-group-list .input-group:first-child .btn-remove {
+  display: none;
+}
+.input-group-list .input-group + .input-group {
+  margin-top: 10px;
+}
+.input-group-list .handle {
+  cursor: move;
+}
+.input-group-list .sort-placeholder {
+  margin: 10px 0;
+  display: block;
+  border: 1px dashed #d0d6df;
+  background: #fcfdfd;
+  border-radius: 3px;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.input-group .btn-link {
+    padding-top: 4px;
+    color: #828282;
+}
