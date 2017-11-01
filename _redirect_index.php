@@ -63,44 +63,9 @@
 	$url .= '&disablekb='.$data_json['disablekb'];
 	$url .= '&fs='.$data_json['fs']; 
 
-	//header("location:".$url);
+	header("location:".$url);
+
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Screenplify Youtube Plugin</title>
-	<style>
-		.overlay,
-		iframe {
-			position: fixed;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			width: 100%;
-			height: 100%;
-			z-index: 1;
-		}
-		.overlay {z-index: 2;}
-	</style>
-</head>
-<body>
-
-	<iframe 
-		id="video" 
-		frameborder="0" 
-		allowfullscreen="1" 
-		title="YouTube video player" 
-		src="<?php echo $url; ?>">	
-	</iframe>
-
-	<?php if($data_json['autoplay']){ ?>
-		<div class="overlay"></div>
-	<?php } ?>
-
-</body>
-</html>
 
 
 

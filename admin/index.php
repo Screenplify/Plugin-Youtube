@@ -7,6 +7,17 @@ if(!isset($_GET['widget_id']) || empty($_GET['widget_id']))
 
 $widget_id = $_GET['widget_id'];
 
+$smsg = '';
+$emsg = '';
+
+if(isset($_GET['msg']))
+{
+    if($_GET['msg'] == 'success')
+    {
+        $smsg = 'Settings have been updated successfully';
+    }
+}
+
 $file_app = '../data/'.$widget_id.'.json';
 
  if(!file_exists($file_app))
@@ -93,13 +104,13 @@ if(@$_POST)
 
 	if(file_put_contents($file_app,$encode_json))
 	{
-		$msg = "Settings has been updated successfully"; 
-		header('Location:'.$_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING']);
+		$smsg = "Settings has been updated successfully"; 
+		header('Location:'.$_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING'].'&msg=success');
 		die;
 	}
 	else
 	{
-		$msg = "fail to update Settings";
+		$emsg = "fail to update Settings";
 	}
 }
 
@@ -147,10 +158,15 @@ if(@$_POST)
 
                 <div id="logo"></div>
 
+                <?php if(!empty($smsg)){ ?>
+                <div class='alert alert-success text-capitalize'>
+                    <?php echo $smsg; ?>
+                </div>
+                <?php } ?>
 
-                <?php if(!empty($msg)){ ?>
+                <?php if(!empty($emsg)){ ?>
                 <div class='alert alert-danger text-capitalize'>
-                    <?php echo $msg; ?>
+                    <?php echo $emsg; ?>
                 </div>
                 <?php } ?>
 
