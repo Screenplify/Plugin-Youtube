@@ -84,6 +84,17 @@
 		}
 		.overlay {z-index: 2;}
 	</style>
+
+    <!-- NEEDED -->
+    <?php
+        $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://"; 
+        $client = $protocol.$_SERVER['SERVER_NAME']."/c/client/assets/plugin_support/header_essentials.min.js";
+        $front = $protocol.$_SERVER['SERVER_NAME']."/c/frontend/assets/plugin_support/header_essentials.min.js";
+        $file = (file_get_contents($client))? $client : $front;    
+    ?> 
+    <script src="<?php echo $file; ?>"></script>
+    <!-- END NEEDED -->
+    
 </head>
 <body>
 

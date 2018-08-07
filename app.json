@@ -1,16 +1,13 @@
 {
-    "plugin": {
-        "version": "1.0"
-    },
     "plugin_box": {
         "version": "3.1"
     },
     "application": {
-        "id": "090845_youtube",
-        "name": "Youtube",
+        "id": "091234_youtube",
+        "name": "Youtube 3.0",
         "author": "Raj",
         "description": "Youtube Plugin for Screenplify",
-        "version": "2.5",
+        "version": "3.0",
         "thumbnail": "",
         "db_name": "data.json"
     },
