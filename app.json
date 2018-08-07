@@ -7,7 +7,7 @@
         "name": "Youtube 3.0",
         "author": "Raj",
         "description": "Youtube Plugin for Screenplify",
-        "version": "3.0",
+        "version": "3.0.7",
         "thumbnail": "",
         "db_name": "data.json"
     },
